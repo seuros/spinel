@@ -31,4 +31,5 @@ true
 [Tag, 1]
 Loud
 nil
+Process::Tms
 undefined method 'say' for nil

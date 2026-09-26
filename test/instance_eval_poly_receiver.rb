@@ -99,6 +99,9 @@ p t.instance_exec(1) { |n| [self.class, n] }
 p REG[:loud].instance_eval { say(:s); self }.class
 p TAGS[:none].instance_eval { self }
 
+# a value-type tail comes back as the value, not nil
+p value_of { Process.times }.class
+
 # a receiver that cannot run the block raises like CRuby
 begin
   REG[:missing].instance_eval { say :nope }
